@@ -1,1 +1,30 @@
-<p>search works!</p>
+<div class="home">
+    <div class="result-title">
+        Result of page
+    </div>
+    <div class="train-list">
+        <!-- Replace @for with *ngFor in Angular template syntax -->
+        @for (item of trainList; track $index) {
+        <div class="train-card">
+            <div class="train-header">
+                {{item.trainName}} ({{item.trainNo}})
+            </div>
+            <div class="train-details">
+                <span>{{item.departureTime}}</span>
+                <span>|</span>
+                <span>{{item.departureStationName}}</span>
+                <span>|</span>
+                <span>{{item.departureDate}}</span>
+                <span>|</span>
+                <span>{{item.arrivalTime}}</span>
+                <span>|</span>
+                <span>{{item.arrivalStationName}}</span>
+            </div>
+            <div class="train-actions">
+                <button class="btn book-btn">Book Now</button>
+                <button class="btn availability-btn">Check Availability</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>

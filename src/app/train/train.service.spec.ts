@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { StationsService } from './stations.service';
+import { TrainService } from './train.service';
 
 describe('StationsService', () => {
-  let service: StationsService;
+  let train: TrainService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(StationsService);
+    train = TestBed.inject(TrainService);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(train).toBeTruthy();
   });
 });

@@ -1,2 +1,32 @@
-<p>home works!</p>
-<h4 *ngFor="let station of stationList">{{ station.stationName }}</h4>
+<div class="home">
+    <span>Reserve Your Seat</span>
+    <div class="main-container">
+        <!-- <div class="search-category"> -->
+        <form class="search-category">
+            <label for="fromStation">From Station</label>
+            <select [(ngModel)]="fromStationId" name="fromStation" id="fromStation">
+                <option value="0" disabled selected>Select Station</option>
+                @for (item of stationList; track $index) {
+                <option [value]="item.stationID">{{item.stationName}}</option>
+                }
+            </select>
+
+            <label for="toStation">To Station</label>
+            <select [(ngModel)]="toStationId" name="toStation" id="toStation">
+                <option value="0" disabled selected>Select Station</option>
+                @for (item of stationList; track $index) {
+
+                <option [value]="item.stationID">{{item.stationName}}</option>
+                }
+            </select>
+
+            <label for="travelDate">Date Of Travel</label>
+            <input type="date" [(ngModel)]="dateOfTravel" name="date" />
+            <button class="search-button" (click)="onClick()">Search</button>
+        </form>
+
+        <!-- </div> -->
+        <div class="home-image">
+        </div>
+    </div>
+</div>

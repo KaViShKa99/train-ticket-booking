@@ -1,9 +1,11 @@
 // Styles for the navigation container
 div {
-    background-color: #000000;
+    background-color: #3FA2F6;
     padding: 1em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    max-height: fit-content;
   
     // Style for the span (Railway)
     span {
@@ -29,7 +31,7 @@ div {
   
           // Hover effect for list items
           &:hover {
-            color: #ff6347; // Tomato color
+            color: #FEB941; // Tomato color
             text-decoration: underline;
           }
         }

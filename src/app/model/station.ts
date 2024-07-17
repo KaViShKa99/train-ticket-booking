@@ -4,8 +4,26 @@ export interface IStation {
   stationCode: string;
 }
 
-export interface ResponseModel {
-  message: string;
-  result: boolean;
-  data: any;
+export class Search {
+  fromStationId: number;
+  toStationId: number;
+  dateOfTravel: string;
+
+  constructor() {
+    this.fromStationId = 0;
+    this.toStationId = 0;
+    this.dateOfTravel = '';
+  }
+}
+export interface TrainObject {
+  trainId: number;
+  trainNo: number;
+  trainName: string;
+  departureStationName: string;
+  arrivalStationName: string;
+  arrivalTime: string;
+  departureTime: string;
+  totalSeats: number;
+  departureDate: string;
+  bookedSeats: number;
 }
